@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
 const navliks = [
   ["Home", "/KaizenClub/"],
   ["Team", "/KaizenClub/team"],
@@ -21,9 +21,9 @@ const Navbar = () => {
       <div className="w-full bg-[#1F2937] text-white flex md:flex-row flex-col justify-between md:px-64 px-4 h-[3.5rem] items-center navbar">
         <div className="flex justify-between w-full mt-4 md:mt-0">
           <div className="logo">
-            <NavLink to="/KaizenClub/">
+            <a href="/KaizenClub/">
               <img src="LogoK.svg" alt="logo" className="h-6" />
-            </NavLink>
+            </a>
           </div>
 
           <button className="md:hidden" onClick={handleClick}>
@@ -32,9 +32,9 @@ const Navbar = () => {
         </div>
         <div className="navlinks hidden flex-col md:flex md:flex-row md:gap-10 md:p-4 w-full md:w-auto">
           {navliks.map((link) => (
-            <NavLink className="mb-3 md:mb-0" key={link} to={link[1]}>
+            <a className="mb-3 md:mb-0" key={link} href={link[1]}>
               {link[0]}
-            </NavLink>
+            </a>
           ))}
         </div>
       </div>
