@@ -18,10 +18,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/KaizenClub" element={<Home />} />
       <Route path="/KaizenClub/Team" element={<Members />} />
-      <Route path="/KaizenClub/events" element={<Team />} />
+      <Route path="/KaizenClub/events" element={<Events />} />
+      <Route path="/KaizenClub/:slug" element={<SlugPage />} /> {/*It is for Dynamic route */}
     </Route>
   )
-);
+)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
